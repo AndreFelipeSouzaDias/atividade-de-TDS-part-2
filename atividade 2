@@ -1,0 +1,99 @@
+programa
+{
+	inclua biblioteca Texto --> txt
+
+	funcao inicio()
+	{
+		real periodoTerra = 365.25
+		real periodoVenus = 0.61519726
+		real periodoMarte = 1.8808158
+		real periodoJupiter = 11.862615
+		real periodoUrano = 84.016846
+		real periodoNetuno = 164.79132
+		real segundosMercurio = 7.61260
+		real idadeSegundos = 977.0
+		real idadeTerrestre, idadePlaneta
+		real idadeTerrestre1, idadePlaneta1
+		real idadeMaisJovem
+		cadeia planetaEscolhido, planetaMaisJovem
+
+		escreva("Períodos orbitais em dias:\n")
+		escreva("Vênus: ", periodoTerra * periodoVenus, " dias\n")
+		escreva("Marte: ", periodoTerra * periodoMarte, " dias\n")
+		escreva("Júpiter: ", periodoTerra * periodoJupiter, " dias\n")
+		escreva("Urano: ", periodoTerra * periodoUrano, " dias\n")
+		escreva("Netuno: ", periodoTerra * periodoNetuno, " dias\n\n")
+
+		escreva("Se você possui 977 milhões de segundos terrestres,\n")
+		escreva("sua idade em Mercúrio é: ", idadeSegundos / segundosMercurio, "\n\n")
+
+		escreva("Digite sua idade em anos terrestres: ")
+		leia(idadeTerrestre)
+
+		escreva("Digite o nome do planeta (Vênus, Marte, Júpiter, Urano ou Netuno): ")
+		leia(planetaEscolhido)
+
+		planetaEscolhido = txt.caixa_baixa(planetaEscolhido)
+
+		se (planetaEscolhido == "venus") {
+			idadePlaneta = idadeTerrestre / periodoVenus
+			escreva("Sua idade em Vênus é: ", idadePlaneta, " anos\n\n")
+		}
+		senao se (planetaEscolhido == "marte") {
+			idadePlaneta = idadeTerrestre / periodoMarte
+			escreva("Sua idade em Marte é: ", idadePlaneta, " anos\n\n")
+		}
+		senao se (planetaEscolhido == "jupiter") {
+			idadePlaneta = idadeTerrestre / periodoJupiter
+			escreva("Sua idade em Júpiter é: ", idadePlaneta, " anos\n\n")
+		}
+		senao se (planetaEscolhido == "urano") {
+			idadePlaneta = idadeTerrestre / periodoUrano
+			escreva("Sua idade em Urano é: ", idadePlaneta, " anos\n\n")
+		}
+		senao se (planetaEscolhido == "netuno") {
+			idadePlaneta = idadeTerrestre / periodoNetuno
+			escreva("Sua idade em Netuno é: ", idadePlaneta, " anos\n\n")
+		}
+		senao {
+			escreva("Planeta inválido!\n\n")
+		}
+
+		escreva("Digite sua idade em anos terrestres novamente: ")
+		leia(idadeTerrestre1)
+
+		idadeMaisJovem = idadeTerrestre1 / periodoVenus
+		planetaMaisJovem = "Vênus"
+		escreva("Sua idade em Vênus é: ", idadeMaisJovem, " anos\n")
+
+		idadePlaneta1 = idadeTerrestre1 / periodoMarte
+		escreva("Sua idade em Marte é: ", idadePlaneta1, " anos\n")
+		se (idadePlaneta1 < idadeMaisJovem) {
+			idadeMaisJovem = idadePlaneta1
+			planetaMaisJovem = "Marte"
+		}
+
+		idadePlaneta1 = idadeTerrestre1 / periodoJupiter
+		escreva("Sua idade em Júpiter é: ", idadePlaneta1, " anos\n")
+		se (idadePlaneta1 < idadeMaisJovem) {
+			idadeMaisJovem = idadePlaneta1
+			planetaMaisJovem = "Júpiter"
+		}
+
+		idadePlaneta1 = idadeTerrestre1 / periodoUrano
+		escreva("Sua idade em Urano é: ", idadePlaneta1, " anos\n")
+		se (idadePlaneta1 < idadeMaisJovem) {
+			idadeMaisJovem = idadePlaneta1
+			planetaMaisJovem = "Urano"
+		}
+
+		idadePlaneta1 = idadeTerrestre1 / periodoNetuno
+		escreva("Sua idade em Netuno é: ", idadePlaneta1, " anos\n")
+		se (idadePlaneta1 < idadeMaisJovem) {
+			idadeMaisJovem = idadePlaneta1
+			planetaMaisJovem = "Netuno"
+		}
+
+		escreva("\nVocê seria mais jovem em: ", planetaMaisJovem, " com ", idadeMaisJovem, " anos\n")
+	}
+}
