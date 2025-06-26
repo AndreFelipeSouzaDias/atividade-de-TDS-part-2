@@ -1,0 +1,21 @@
+programa
+{
+	inclua biblioteca Matematica --> m
+    funcao inicio()
+    {
+        real L1, L2, diagonal, radicando
+
+        escreva("Digite o lado 1 da casa (em metros): ")
+        leia(L1)
+
+        escreva("Digite o lado 2 da casa (em metros): ")
+        leia(L2)
+
+        radicando = L1 * L1 + L2 * L2
+        diagonal = m.raiz(radicando, 2)
+
+        escreva("Radicando (L1² + L2²): ", radicando, "\n")
+        escreva("Índice da raiz: 2 (raiz quadrada)\n")
+        escreva("Quantidade mínima de fio: ", diagonal, " metros\n")
+    }
+}
