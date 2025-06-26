@@ -1,0 +1,34 @@
+programa
+{
+	
+	funcao inicio()
+	{
+    inteiro total_horas
+    inteiro total_minutos
+    inteiro idade
+    inteiro idade_em_segundos
+    inteiro chocolates
+    inteiro idade_em_anos
+    
+
+        total_horas = 24 * 365
+        escreva("Total de horas em um ano: ", total_horas, "\n")
+        
+        total_minutos = 60 * 24 * 365 * 10
+        escreva("Total de minutos em uma década: ", total_minutos, "\n")
+        
+        escreva("Digite sua idade em anos: ")
+        leia(idade)
+        
+        idade_em_segundos = idade * 365 * 24 * 60 * 60
+        escreva("Sua idade em segundos: ", idade_em_segundos, "\n")
+       
+        escreva("Quantos chocolates você pretende comer na vida? ")
+        leia(chocolates)
+        
+        escreva("Você pretende comer ", chocolates, " chocolates na vida.\n")
+        
+        idade_em_anos = 977000000 / (365 * 24 * 60 * 60)
+        escreva("Se sua idade é de 977 milhões de segundos, você tem aproximadamente ", idade_em_anos, " anos.")
+    }
+}
